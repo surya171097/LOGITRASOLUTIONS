@@ -123,7 +123,58 @@ a {
                 padding: 8px 0;
             }
         }
-
+.feedback-section {
+    background: #f9fafb;
+    padding: 60px 20px;
+  }
+  .feedback-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .feedback-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px 20px;
+    flex: 1 1 48%;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  .feedback-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  .feedback-card h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 16px;
+  }
+  .feedback-card p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .feedback-card iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  @media(max-width: 768px) {
+    .feedback-card {
+      flex: 1 1 100%;
+    }
+  }
 
     </style>
 </head>
@@ -253,7 +304,7 @@ a {
                     <div class="card border-danger">
                         <a href="3pl-4pl.html">  <img src="pl.JPG" class="card-img-top" alt="3PL & 4PL Management">
                             <div class="card-body bg-light">
-                                 <h5 class="card-title text-danger">3PL Management</h5>
+                                 <h5 class="card-title text-danger">3PL & 4PL Management</h5>
                             </div>
                         </a>
                     </div>
@@ -336,8 +387,38 @@ a {
     </div>
 </section>
 
+https://forms.gle/hC3HzPxw4KWRyDK2A?
+https://docs.google.com/spreadsheets/d/e/2PACX-1vShse8An9yqPq8FugAqV8i8W1j0vnKLZ2I7Vjf5tQWTbyVBX3KlLSWmcisYdxvX58Z9YXfV0j7kEN-c/pubhtml?
 
-    </section>
+<section class="feedback-section">
+  <div class="feedback-container">
+
+    <!-- Feedback Form -->
+    <div class="feedback-card">
+      <h2>Customer Feedback</h2>
+      <p>Please share your experience with us.</p>
+      <iframe src="https://forms.gle/hC3HzPxw4KWRyDK2A?embedded=true" 
+              style="flex-grow: 1;">
+        Loading…
+      </iframe>
+    </div>
+
+    <!-- Customer Reviews Wall -->
+    <div class="feedback-card">
+      <h2>📝 What Our Customers Say</h2>
+      <div style="width: 100%; height: 100%; overflow: hidden; border-radius: 10px;">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vShse8An9yqPq8FugAqV8i8W1j0vnKLZ2I7Vjf5tQWTbyVBX3KlLSWmcisYdxvX58Z9YXfV0j7kEN-c/pubhtml?
+widget=true&amp;headers=false" 
+                style="flex-grow: 1;">
+          Loading…
+        </iframe>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
 
     <div class="whatsapp-container">
         <a href="https://wa.me/917990797131" class="whatsapp-float" target="_blank">
