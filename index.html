@@ -407,32 +407,40 @@ a {
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       min-width: 280px;
       max-width: 450px;
-      text-align: center;
+      height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-    " onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'">
-      <h2 style="font-size: 18px; font-weight: 700; margin-bottom: 6px;">Customer Feedback</h2>
-      <p style="margin-bottom: 12px; color: #666; font-size: 13px;">We value your thoughts!</p>
+    " 
+    onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" 
+    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'">
 
-      <!-- Call to Action Button -->
-      <a href="#feedback-form" style="
-        display: inline-block;
-        background-color: #3b82f6;
-        color: white;
-        padding: 6px 14px;
-        border-radius: 6px;
-        font-weight: 600;
-        margin-bottom: 12px;
-        font-size: 13px;
-        text-decoration: none;
-        transition: background-color 0.3s;
-      " onmouseover="this.style.backgroundColor='#2563eb'" onmouseout="this.style.backgroundColor='#3b82f6'">
-        ✍️ Submit Feedback
-      </a>
+      <div>
+        <h2 style="font-size: 18px; font-weight: 700; margin-bottom: 6px;">Customer Feedback</h2>
+        <p style="margin-bottom: 12px; color: #666; font-size: 13px;">We value your thoughts!</p>
 
-      <div id="feedback-form" style="overflow: hidden; border-radius: 6px; margin-top: 12px;">
+        <a href="#feedback-form" style="
+          display: inline-block;
+          background-color: #3b82f6;
+          color: white;
+          padding: 6px 14px;
+          border-radius: 6px;
+          font-weight: 600;
+          margin-bottom: 12px;
+          font-size: 13px;
+          text-decoration: none;
+          transition: background-color 0.3s;
+        " 
+        onmouseover="this.style.backgroundColor='#2563eb'" 
+        onmouseout="this.style.backgroundColor='#3b82f6'">
+          ✍️ Submit Feedback
+        </a>
+      </div>
+
+      <div id="feedback-form" style="overflow: hidden; border-radius: 6px; flex-grow: 1; margin-top: 12px;">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfX-Of4xx4ZM26weFgORCzNQO92oahkRt4Yvm3Rdz0i5gEkNQ/viewform?embedded=true" 
-                style="width: 100%; height: 320px; border: none;">
-          Loading…
+          style="width: 100%; height: 100%; border: none;">
         </iframe>
       </div>
     </div>
@@ -446,23 +454,34 @@ a {
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       min-width: 280px;
       max-width: 450px;
+      height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-    " onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'">
+    " 
+    onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" 
+    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'">
+
       <h2 style="text-align: center; font-size: 18px; font-weight: 700; margin-bottom: 12px;">
         📝 Customer Reviews
       </h2>
 
       <div id="reviews" style="
-        display: grid;
-        grid-template-columns: 1fr;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
         gap: 10px;
+        overflow-y: auto;
+        padding-right: 8px;
       ">
         <!-- Reviews will be loaded here -->
       </div>
 
-      <div id="loading" style="text-align: center; margin-top: 10px; color: #999; font-size: 13px;">Loading reviews...</div>
+      <div id="loading" style="text-align: center; margin-top: 10px; color: #999; font-size: 13px;">
+        Loading reviews...
+      </div>
     </div>
-
   </div>
 
   <!-- Reviews Script with Animation and Hover -->
@@ -521,7 +540,6 @@ a {
       });
   </script>
 </section>
-
 
 
 
