@@ -386,35 +386,143 @@ a {
         <p><strong>Address:</strong> L-106 Sorrel Apartments, Applewood Township, Ahemdabad-380058</p>
     </div>
 </section>
-    
-<section class="feedback-section">
-  <div class="feedback-container">
+
+<section class="feedback-section" style="padding: 30px 15px; background-color: #f9fafb;">
+  <div class="feedback-container" style="
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: auto;
+  ">
 
     <!-- Feedback Form -->
-    <div class="feedback-card">
-      <h2>Customer Feedback</h2>
-      <p>Please share your experience with us.</p>
-      <iframe src="https://forms.gle/hC3HzPxw4KWRyDK2A?embedded=true" 
-              style="flex-grow: 1;">
-        Loading…
-      </iframe>
-    </div>
+    <div class="feedback-card" style="
+      flex: 1 1 350px;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      min-width: 280px;
+      max-width: 450px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    " onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'">
+      <h2 style="font-size: 18px; font-weight: 700; margin-bottom: 6px;">Customer Feedback</h2>
+      <p style="margin-bottom: 12px; color: #666; font-size: 13px;">We value your thoughts!</p>
 
-    <!-- Customer Reviews Wall -->
-    <div class="feedback-card">
-      <h2>📝 What Our Customers Say</h2>
-      <div style="width: 100%; height: 100%; overflow: hidden; border-radius: 10px;">
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vShse8An9yqPq8FugAqV8i8W1j0vnKLZ2I7Vjf5tQWTbyVBX3KlLSWmcisYdxvX58Z9YXfV0j7kEN-c/pubhtml?
-widget=true&amp;headers=false" 
-                style="flex-grow: 1;">
+      <!-- Call to Action Button -->
+      <a href="#feedback-form" style="
+        display: inline-block;
+        background-color: #3b82f6;
+        color: white;
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        font-size: 13px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      " onmouseover="this.style.backgroundColor='#2563eb'" onmouseout="this.style.backgroundColor='#3b82f6'">
+        ✍️ Submit Feedback
+      </a>
+
+      <div id="feedback-form" style="overflow: hidden; border-radius: 6px; margin-top: 12px;">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfX-Of4xx4ZM26weFgORCzNQO92oahkRt4Yvm3Rdz0i5gEkNQ/viewform?embedded=true" 
+                style="width: 100%; height: 320px; border: none;">
           Loading…
         </iframe>
       </div>
     </div>
 
+    <!-- Customer Reviews Section -->
+    <div id="customer-reviews" style="
+      flex: 1 1 350px;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      min-width: 280px;
+      max-width: 450px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    " onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'">
+      <h2 style="text-align: center; font-size: 18px; font-weight: 700; margin-bottom: 12px;">
+        📝 Customer Reviews
+      </h2>
+
+      <div id="reviews" style="
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      ">
+        <!-- Reviews will be loaded here -->
+      </div>
+
+      <div id="loading" style="text-align: center; margin-top: 10px; color: #999; font-size: 13px;">Loading reviews...</div>
+    </div>
 
   </div>
+
+  <!-- Reviews Script with Animation and Hover -->
+  <script>
+    const sheetURL = "https://opensheet.elk.sh/17PDl0guVELhyyUZy0ku2dDLMWnJvTs5lLWI7GOTpjjA/Form Responses 1";
+
+    fetch(sheetURL)
+      .then(response => response.json())
+      .then(data => {
+        const reviewsContainer = document.getElementById('reviews');
+        const loading = document.getElementById('loading');
+        loading.style.display = 'none';
+
+        data.slice(-6).reverse().forEach((entry, index) => {
+          const card = document.createElement('div');
+          card.style.background = '#f9fafb';
+          card.style.padding = '10px';
+          card.style.borderRadius = '8px';
+          card.style.boxShadow = '0 1px 4px rgba(0,0,0,0.04)';
+          card.style.borderLeft = '3px solid #3b82f6';
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(20px)';
+          card.style.transition = 'all 0.6s ease, transform 0.3s ease, box-shadow 0.3s ease';
+          card.style.transitionDelay = `${index * 0.1}s`;
+
+          card.onmouseover = () => {
+            card.style.transform = 'translateY(-4px)';
+            card.style.boxShadow = '0 6px 12px rgba(0,0,0,0.1)';
+          };
+          card.onmouseout = () => {
+            card.style.transform = 'translateY(0)';
+            card.style.boxShadow = '0 1px 4px rgba(0,0,0,0.04)';
+          };
+
+          card.innerHTML = `
+            <h3 style="margin-bottom: 4px; font-weight: bold; font-size: 15px;">
+              ${entry['Name'] || "Anonymous"}
+            </h3>
+            <div style="color: #f59e0b; margin-bottom: 4px; font-size: 13px;">
+              ${'⭐'.repeat(Number(entry['Rating']) || 5)}
+            </div>
+            <p style="color: #555; font-size: 12px;">${entry['Feedback'] || "No feedback provided."}</p>
+          `;
+
+          reviewsContainer.appendChild(card);
+
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 100);
+        });
+      })
+      .catch(error => {
+        document.getElementById('loading').innerText = "Couldn't load reviews.";
+        console.error('Error fetching reviews:', error);
+      });
+  </script>
 </section>
+
+
 
 
     <div class="whatsapp-container">
