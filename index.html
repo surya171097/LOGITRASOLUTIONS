@@ -339,19 +339,59 @@ a {
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!-- Feedback Form Section -->
-<section style="margin-top: 40px;">
-  <h2 style="text-align:center; margin-bottom:20px;">Share Your Feedback</h2>
+<section style="margin-top: 40px; padding: 40px 20px;">
+  <h2 style="text-align:center; margin-bottom:20px; font-size: 32px; font-weight: 800; color: #1e3a8a;">Share Your Feedback</h2>
 
-  <div class="feedback-card" style="max-width: 500px; margin: auto; padding: 20px; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-
-    <form id="feedbackForm" action="https://formsubmit.co/surya.logitra@gmail.com" method="POST" style="display: flex; flex-direction: column; gap: 12px;">
-      <!-- Important hidden fields -->
+  <div style="
+    max-width: 550px; 
+    margin: auto; 
+    padding: 30px; 
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe); 
+    border: 1px solid #e2e8f0; 
+    border-radius: 16px; 
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+  
+    <form id="feedbackForm" action="https://formsubmit.co/surya.logitra@gmail.com" method="POST" style="display: flex; flex-direction: column; gap: 18px;">
+      
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_subject" value="New Feedback Received!">
 
-      <input type="text" name="Name" id="name" placeholder="Your Name" required style="padding: 10px; border: 1px solid #ddd; border-radius: 6px;">
+      <input 
+        type="text" 
+        name="Name" 
+        id="name" 
+        placeholder="Enter Your Name" 
+        required 
+        style="
+          padding: 14px; 
+          border: 1px solid #d1d5db; 
+          border-radius: 10px; 
+          font-size: 15px;
+          background: #ffffff; 
+          transition: 0.3s;
+        " 
+        onfocus="this.style.borderColor='#3b82f6'; this.style.boxShadow='0 0 0 4px #bfdbfe';" 
+        onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none';"
+      >
       
-      <select name="Rating" id="rating" required style="padding: 10px; border: 1px solid #ddd; border-radius: 6px;">
+      <select 
+        name="Rating" 
+        id="rating" 
+        required 
+        style="
+          padding: 14px; 
+          border: 1px solid #d1d5db; 
+          border-radius: 10px; 
+          font-size: 15px;
+          background: #ffffff; 
+          transition: 0.3s;
+        " 
+        onfocus="this.style.borderColor='#3b82f6'; this.style.boxShadow='0 0 0 4px #bfdbfe';" 
+        onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none';"
+      >
         <option value="">Select Rating</option>
         <option value="5">⭐️⭐️⭐️⭐️⭐️ Excellent</option>
         <option value="4">⭐️⭐️⭐️⭐️ Very Good</option>
@@ -360,34 +400,132 @@ a {
         <option value="1">⭐️ Poor</option>
       </select>
       
-      <textarea name="Feedback" id="feedback" rows="3" placeholder="Your Feedback" required style="padding: 10px; border: 1px solid #ddd; border-radius: 6px;"></textarea>
+      <textarea 
+        name="Feedback" 
+        id="feedback" 
+        rows="4" 
+        placeholder="Write Your Feedback..." 
+        required 
+        style="
+          padding: 14px; 
+          border: 1px solid #d1d5db; 
+          border-radius: 10px; 
+          font-size: 15px;
+          background: #ffffff; 
+          transition: 0.3s;
+        " 
+        onfocus="this.style.borderColor='#3b82f6'; this.style.boxShadow='0 0 0 4px #bfdbfe';" 
+        onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none';"
+      ></textarea>
       
-      <button type="submit" style="padding: 10px; background: #3b82f6; color: white; border: none; border-radius: 6px; cursor: pointer;">Submit Feedback</button>
+      <button type="submit" style="
+        padding: 14px; 
+        background: linear-gradient(to right, #3b82f6, #60a5fa); 
+        color: white; 
+        font-weight: 700; 
+        font-size: 16px; 
+        border: none; 
+        border-radius: 10px; 
+        cursor: pointer; 
+        transition: background 0.3s;
+      "
+      onmouseover="this.style.background='linear-gradient(to right, #2563eb, #3b82f6)';"
+      onmouseout="this.style.background='linear-gradient(to right, #3b82f6, #60a5fa)';"
+      >Submit Feedback</button>
     </form>
-
   </div>
 </section>
 
 <!-- Customer Reviews Section -->
-<section style="margin-top: 60px;">
-  <h2 style="text-align:center; margin-bottom:20px;">Recent Customer Feedback</h2>
+<section style="margin-top: 60px; padding: 40px 20px; background: linear-gradient(to bottom right, #f0f9ff, #e0f2fe); border-radius: 12px;">
+  <h2 style="text-align:center; margin-bottom: 30px; font-size: 28px; font-weight: 700; color: #1e40af; position: relative;">
+    Recent Customer Feedback
+    <span style="display: block; width: 60px; height: 3px; background: #3b82f6; margin: 8px auto 0; border-radius: 2px;"></span>
+  </h2>
 
-  <div id="loading" style="text-align:center; padding:20px;">Loading reviews...</div>
-  <div id="reviews" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px;"></div>
+  <div id="loading" style="text-align:center; padding:20px; font-size: 16px;">Loading reviews...</div>
+
+  <div id="reviews" style="
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 24px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    justify-content: flex-start;
+  ">
+    <!-- Dynamic Reviews -->
+  </div>
 </section>
 
-<!-- Feedback Form & Reviews Script -->
+<style>
+  /* Hide scrollbar for Webkit */
+  #reviews::-webkit-scrollbar {
+    display: none;
+  }
+
+  .review-card {
+    flex: 0 0 auto;
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+    max-width: 280px;
+    min-width: 260px;
+    scroll-snap-align: start;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .review-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+  }
+
+  .review-name {
+    font-weight: 700;
+    font-size: 16px;
+    color: #111827;
+    margin-bottom: 6px;
+  }
+
+  .review-rating {
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #f59e0b;
+    letter-spacing: 2px;
+  }
+
+  .review-text {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.5;
+    min-height: 60px;
+  }
+
+  .scroll-hint {
+    text-align: center;
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 10px;
+  }
+</style>
+
 <script>
 const feedbackForm = document.getElementById('feedbackForm');
 const reviewsContainer = document.getElementById('reviews');
 const loading = document.getElementById('loading');
 
-// Your Google Sheet URL for reviews
 const sheetURL = "https://opensheet.elk.sh/17PDl0guVELhyyUZy0ku2dDLMWnJvTs5lLWI7GOTpjjA/Form Responses 1";
 
-// Handle form submit
 feedbackForm.addEventListener('submit', function(event) {
-  event.preventDefault(); // stop the form default submit
+  event.preventDefault();
 
   Swal.fire({
     title: 'Confirm Submission',
@@ -400,7 +538,6 @@ feedbackForm.addEventListener('submit', function(event) {
     cancelButtonText: 'Cancel'
   }).then((result) => {
     if (result.isConfirmed) {
-      // Show loading
       Swal.fire({
         title: 'Submitting...',
         allowOutsideClick: false,
@@ -409,7 +546,6 @@ feedbackForm.addEventListener('submit', function(event) {
         }
       });
 
-      // Submit form manually
       fetch(feedbackForm.action, {
         method: 'POST',
         body: new FormData(feedbackForm)
@@ -438,7 +574,6 @@ feedbackForm.addEventListener('submit', function(event) {
   });
 });
 
-// Fetch and show reviews
 function fetchReviews() {
   loading.style.display = 'block';
   reviewsContainer.innerHTML = '';
@@ -448,45 +583,25 @@ function fetchReviews() {
     .then(data => {
       loading.style.display = 'none';
 
-      data.slice(-6).reverse().forEach((entry, index) => {
+      data.slice(-6).reverse().forEach((entry) => {
         const card = document.createElement('div');
-        card.style.background = '#f9fafb';
-        card.style.padding = '10px';
-        card.style.borderRadius = '8px';
-        card.style.boxShadow = '0 1px 4px rgba(0,0,0,0.04)';
-        card.style.borderLeft = '3px solid #3b82f6';
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'all 0.6s ease, transform 0.3s ease, box-shadow 0.3s ease';
-        card.style.transitionDelay = `${index * 0.1}s`;
-        card.style.maxWidth = '300px';
-
-        card.onmouseover = () => {
-          card.style.transform = 'translateY(-4px)';
-          card.style.boxShadow = '0 6px 12px rgba(0,0,0,0.1)';
-        };
-        card.onmouseout = () => {
-          card.style.transform = 'translateY(0)';
-          card.style.boxShadow = '0 1px 4px rgba(0,0,0,0.04)';
-        };
+        card.className = 'review-card';
 
         card.innerHTML = `
-          <h3 style="margin-bottom: 4px; font-weight: bold; font-size: 15px;">
-            ${entry['Name'] || "Anonymous"}
-          </h3>
-          <div style="color: #f59e0b; margin-bottom: 4px; font-size: 13px;">
-            ${'⭐'.repeat(Number(entry['Rating']) || 5)}
-          </div>
-          <p style="color: #555; font-size: 12px;">${entry['Feedback'] || "No feedback provided."}</p>
+          <div class="review-name">${entry['Name'] || "Anonymous"}</div>
+          <div class="review-rating">${'⭐️'.repeat(Number(entry['Rating']) || 5)}</div>
+          <div class="review-text">${entry['Feedback'] || "No feedback provided."}</div>
         `;
 
         reviewsContainer.appendChild(card);
-
-        setTimeout(() => {
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }, 100);
       });
+
+      if (data.length > 3) {
+        const hint = document.createElement('div');
+        hint.className = 'scroll-hint';
+        hint.innerHTML = '👉 Swipe to see more reviews';
+        reviewsContainer.parentElement.appendChild(hint);
+      }
     })
     .catch(error => {
       loading.style.display = 'none';
@@ -495,9 +610,9 @@ function fetchReviews() {
     });
 }
 
-// Load reviews on page load
 fetchReviews();
 </script>
+
 
 
     <div class="whatsapp-container">
