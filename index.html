@@ -15,8 +15,8 @@ a {
         section {
             scroll-margin-top: 120px;
         }
-
-        .hero {
+ 
+          .hero {
             position: relative;
             overflow: hidden;
         }
@@ -178,20 +178,100 @@ a {
         </div>
     </div>
 
-    <div class="container py-4" id="tracking">
-        <h2 class="section-title" data-aos="fade-down">Track Your Consignment</h2>
+  <div 
+  class="container-fluid py-4" 
+  id="tracking" 
+  style="
+    background-image: url('consignment.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    font-size: 18px; 
+    color: white;
+"
+>
+  <!-- Title Box -->
+  <div style="
+    background-color: black;
+    color: orange;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+    font-weight: bold;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  " data-aos="fade-down">
+    Track Your Consignment
+  </div>
 
-        <div class="input-group mb-3" style="max-width: 400px;" data-aos="zoom-in">
-            <input type="text" id="docNumber" placeholder="Enter Document Number" onkeypress="checkEnter(event)" class="form-control" />
-            <button onclick="trackDocument()" class="btn btn-primary">Track</button>
-        </div>
-
-        <div id="result" style="margin-top: 20px; font-family: sans-serif;" data-aos="fade-up" data-aos-delay="200"></div>
+  <!-- Input and Button (Centered) -->
+  <div class="d-flex justify-content-center" data-aos="zoom-in">
+    <div class="input-group mb-3" style="max-width: 400px;">
+      <input 
+        type="text" 
+        id="docNumber" 
+        placeholder="Enter Document Number" 
+        onkeypress="checkEnter(event)" 
+        class="form-control"
+      />
+      <button onclick="trackDocument()" class="btn btn-primary">Track</button>
     </div>
+  </div>
 
-    <section id="about" class="py-5">
+  <!-- Result Message -->
+  <div id="result" 
+     style="
+        margin-top: 20px; 
+        font-family: sans-serif; 
+        text-align: center; 
+        background-color: skyblue; 
+        color: #000;
+        padding: 15px 20px; 
+        border-radius: 10px; 
+        max-width: 500px;
+        margin-left: auto; 
+        margin-right: auto;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+     " 
+     data-aos="fade-up" 
+     data-aos-delay="200">
+</div>
+
+</div>
+
+
+
+  <section id="about" style="
+  background-image: url('about.png'); 
+  background-size: cover; 
+  background-position: center; 
+  color: black; 
+  padding: 60px 20px;
+font-size: 18px;
+">
+
+
         <div class="container" data-aos="fade-up">
-            <h2 class="section-title" data-aos="fade-down">About Us</h2>
+            <div 
+  data-aos="fade-down" 
+  style="
+    display: inline-block;
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+ margin-bottom: 40px;
+">
+  About Us
+</div>
+
 
             <p data-aos="fade-right">
                 <strong style="color: red;">Logitra Solutions</strong> is a Service Company, incorporated as a Private Limited company in
@@ -201,25 +281,50 @@ a {
             </p>
 
             <div class="mt-4" data-aos="zoom-in-up">
-                <h4 style="color: orange;">Our Mission</h4>
+                <h4 style="color: blue;">Our Mission</h4>
                 <p>To become 100% growth oriented services conglomerate of pride people always in action for solutions of service related problems of logistics and transport industry as a whole, and remain in leading role always. While doing so not to forget human dignity and believe in service with smile to maintain customers scarcity about its services. To meet the challenges and particularly customers demand in the various industrial clusters and evolve itself to meet those challenges in coming years.</p>
             </div>
 
             <div class="mt-4" data-aos="zoom-in-up" data-aos-delay="150">
-                <h4 style="color: orange;">Our Vision</h4>
+                <h4 style="color: blue;">Our Vision</h4>
                 <p>Logitra Solutions is more a solution providing commercial conglomerate of skilled people of where everyone has placed to serve the customers best so that to maintain their scarcity about companies products and services forever. While doing so Logitra pledges to also maintain the enthusiasm of its employees, stakeholders, service partners and suppliers. At logitra we believe in strengthening the relationships as it takes time to build them and once built it must be enjoyed by generations.</p>
             </div>
 
             <div class="mt-4" data-aos="zoom-in-up" data-aos-delay="300">
-                <h4 style="color: orange;">Quality Policy</h4>
+                <h4 style="color: blue;">Quality Policy</h4>
                 <p>Logitra Solutions working as bridge between businesses pledges always to provide best quality of services of world class industries into this field and thus adopt and act with new ideas and equipments to match the best in the industry.</p>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-5 bg-light">
+   <section id="services" class="py-5" style="
+  background-image: url('about.png'); 
+  background-size: cover; 
+  background-position: center; 
+  font-size: 18px; 
+  color: #000; /* Adjust for readability */
+">
+  <div class="container" data-aos="fade-up">
+
         <div class="container" data-aos="fade-up">
-            <h2 class="section-title" data-aos="fade-down">Our Services</h2>
+            <div 
+  data-aos="fade-down" 
+  style="
+    display: inline-block;
+    background: linear-gradient(to right, #28a745, #a1dd70);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+ margin-bottom: 40px;
+  ">
+  Our Services
+</div>
+
             <div class="row text-center">
                 <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card border-danger">
@@ -326,12 +431,53 @@ a {
     </section>
 
 
-    <section id="contact" class="py-5">
+   <section id="contact" class="py-5" style="
+  background-image: url('contact.png'); 
+  background-size: cover; 
+  background-position: center; 
+  font-size: 18px; 
+  color: black; /* or black, depending on image */
+">
+
     <div class="container" data-aos="fade-up">
-        <h2 class="section-title">Contact Us</h2>
-        <p><strong>Email:</strong> <a href="mailto:pramod.logitra@gmail.com">pramod.logitra@gmail.com</a></p>
-        <p><strong>Mobile:</strong> +91 7990797131, +91 9727544888</p>
-        <p><strong>Address:</strong> L-106 Sorrel Apartments, Applewood Township, Ahemdabad-380058</p>
+        <div 
+  data-aos="fade-down"
+  style="
+    display: inline-block;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+ margin-bottom: 40px;
+  ">
+  Contact Us
+</div>
+<div style="
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 20px;
+    line-height: 1.7;
+        margin-left: 0;
+    margin-right: auto;
+">
+    <p><strong>Email:</strong> 
+        <a href="mailto:pramod.logitra@gmail.com" style="color: #007BFF; text-decoration: none; font-weight: bold;">
+            pramod.logitra@gmail.com
+        </a>
+    </p>
+    <p><strong>Mobile:</strong> +91 7990797131, +91 9727544888</p>
+    <p><strong>Address:</strong> L-106 Sorrel Apartments, Applewood Township, Ahemdabad-380058</p>
+</div>
+
     </div>
 </section>
 
@@ -339,10 +485,36 @@ a {
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!-- Feedback Form Section -->
-<section style="margin-top: 40px; padding: 40px 20px;">
-  <h2 style="text-align:center; margin-bottom:20px; font-size: 32px; font-weight: 800; color: #1e3a8a;">Share Your Feedback</h2>
+<section style="
+  margin-top: 40px; 
+  padding: 40px 20px; 
+  background-image: url('feedback.png'); 
+  background-size: cover; 
+  background-position: center; 
+  font-size: 18px; 
+  color: white;
+">
 
   <div style="
+    background-color: blue; 
+    color: #000; 
+    padding: 15px 30px; 
+    border-radius: 10px; 
+    text-align: center; 
+    max-width: 400px; 
+    margin: 0 auto 30px auto; 
+    font-weight: bold; 
+    font-size: 34px;
+ color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  ">
+    Share Your Feedback
+  </div>
+
+  <!-- Your existing feedback form goes here -->
+
+
+    <div style="
     max-width: 550px; 
     margin: auto; 
     padding: 30px; 
@@ -439,7 +611,7 @@ a {
 <!-- Customer Reviews Section -->
 <section style="margin-top: 60px; padding: 40px 20px; background: linear-gradient(to bottom right, #f0f9ff, #e0f2fe); border-radius: 12px;">
   <h2 style="text-align:center; margin-bottom: 30px; font-size: 28px; font-weight: 700; color: #1e40af; position: relative;">
-    Recent Customer Feedback
+    Recent Customer's Feedback
     <span style="display: block; width: 60px; height: 3px; background: #3b82f6; margin: 8px auto 0; border-radius: 2px;"></span>
   </h2>
 
