@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
     <style>
 a {
     text-decoration: none !important;
@@ -15,7 +17,51 @@ a {
         section {
             scroll-margin-top: 120px;
         }
- 
+  .card-img-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+.card-img-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-img-container img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+  }
+
+  .floating-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, #28a745, #a1dd70);
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+
+  .floating-btn:hover {
+    background: linear-gradient(to right, #1f7a35, #86ca52);
+    transform: translateX(-50%) scale(1.05);
+    color: #fff;
+  }
+
+  .card-title {
+    font-weight: bold;
+  }
           .hero {
             position: relative;
             overflow: hidden;
@@ -112,6 +158,36 @@ a {
             width: 20px;
         }
 
+.nav-btn {
+    margin: 0 10px;
+    padding: 8px 18px;
+    background: white;
+    color: yellow;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 1000;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
+    outline: none;
+}
+
+.nav-btn:hover {
+    background: lightgreen;
+    color: grey;
+    border-color: #ff3c3c;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn:focus,
+.nav-btn:active {
+    background: yellow; /* a slightly darker red or same as hover */
+    color: yellow;
+    border-color: #e73333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    outline: none;
+}
+
+
         /* Mobile Adjustments (you might need to tweak these) */
         @media screen and (max-width: 768px) {
             .whatsapp-float {
@@ -139,16 +215,24 @@ a {
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
+           <!-- Stylish Navigation Bar -->
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+            <a class="nav-link nav-btn" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-btn" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-btn" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-btn" href="#contact">Contact</a>
+        </li>
+    </ul>
+</div>
+
         </div>
     </nav>
     <div id="heroCarousel" class="carousel slide hero" data-bs-ride="carousel">
@@ -248,7 +332,6 @@ a {
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
 
 <section id="about" style="
-background-image: url('blurr.png'); 
   background-size: cover; 
   background-position: center; 
   color: black; 
@@ -321,139 +404,224 @@ background-image: url('blurr.png');
   </div>
 </section>
 
-   <section id="services" class="py-5" style="
-  background-image: url('servicesb.png'); 
-  background-size: cover; 
-  background-position: center; 
-  font-size: 18px; 
-  color: #000; /* Adjust for readability */
-">
-  <div class="container" data-aos="fade-up">
+   <style>
+  .card {
+    position: relative;
+    overflow: hidden;
+  }
 
-        <div class="container" data-aos="fade-up">
-            <div 
-  data-aos="fade-down" 
-  style="
-    display: inline-block;
-    background: linear-gradient(to right, #28a745, #a1dd70);
-    color: white;
-    padding: 10px 30px;
+  .floating-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: #fff;
     border-radius: 50px;
-    font-size: 25px;
-    font-weight: 700;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
-    letter-spacing: 1px;
- margin-bottom: 40px;
-font-family: 'Dancing Script', cursive;
-  ">
-  Our Services
-</div>
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
 
-            <div class="row text-center">
-                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card border-danger">
-                        <a href="surface-express.html"> <img src="surface.JPG" class="card-img-top" alt="Surface Express">
-                            <div class="card-body bg-light">
-                                <h5 class="card-title text-danger">Surface Express</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card border-danger">
-                         <a href="air-express.html">  <img src="air.JPG" class="card-img-top" alt="Air Express">
-                            <div class="card-body bg-light">
-                                <h5 class="card-title text-danger">Air Express</h5>
-                            </div>
-                         </a>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card border-danger">
-                        <a href="demand-chain.html"> <img src="demand.JPG" class="card-img-top" alt="Managing Demand Chain">
-                            <div class="card-body bg-light">
-                                <h5 class="card-title text-danger">Managing Demand Chain</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="card border-danger">
-                        <a href="3pl-4pl.html">  <img src="pl.JPG" class="card-img-top" alt="3PL & 4PL Management">
-                            <div class="card-body bg-light">
-                                 <h5 class="card-title text-danger">3PL & 4PL Management</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+  .floating-btn:hover {
+    background-color: #0056b3;
+    transform: translateX(-50%) scale(1.05);
+  }
 
-                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="500">
-                    <div class="card border-danger">
-                        <a href="cold-chain.html">
-                            <img src="cold.JPG" class="card-img-top" alt="Cold chain Logistics">
-                            <div class="card-body bg-light">
-                                <h5 class="card-title text-danger">Cold chain Logistics</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="600">
-                    <div class="card border-danger">
-                        <a href="e-consultancy.html">
-                            <img src="e.JPG" class="card-img-top" alt="E-Consultancy">
-                            <div class="card-body bg-light">
-                                <h5 class="card-title text-danger">E-Consultancy</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="700">
-                    <div class="card border-danger">
-                         <a href="real-time.html">
-                            <img src="real.JPG" class="card-img-top" alt="Real-Time Tracking">
-                            <div class="card-body bg-light">
-                                <h5 class="card-title text-danger">Real-Time Tracking</h5>
-                            </div>
-                         </a>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="800">
-                    <div class="card border-danger">
-                        <a href="customer-support.html">
-                            <img src="customer.JPG" class="card-img-top" alt="Customer Support">
-                            <div class="card-body bg-light">
-                                <h5 class="card-title text-danger">Customer Support</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
+  .floating-btn i {
+    font-size: 16px;
+  }
+
+  .card-img-top {
+    object-fit: cover;
+    height: 220px;
+  }
+</style>
+
+<!-- Replace or enhance the following section -->
+<section id="services" class="py-5" style="background-size: cover; background-position: center; font-size: 18px; color: #000;">
+  <div class="container" data-aos="fade-up">
+    <div data-aos="fade-down" style="display: inline-block; background: linear-gradient(to right, #28a745, #a1dd70); color: white; padding: 10px 30px; border-radius: 50px; font-size: 25px; font-weight: 700; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; font-family: 'Dancing Script', cursive;">
+      Our Services
+    </div>
+
+    <div class="row text-center">
+      <!-- Repeat for all 8 services -->
+      <!-- 1. Surface Express -->
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card border-danger">
+          <div class="card-img-container">
+            <img src="surface.JPG" class="card-img-top" alt="Surface Express">
+            <a href="surface-express.html" class="floating-btn">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="card-body bg-light text-center">
+            <h5 class="card-title text-danger">Surface Express</h5>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section id="why-choose-us" style="background-color: #1d1d1d; color: white; padding: 60px 20px;">
-        <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; align-items: center;">
-
-            <div style="flex: 1 1 500px; padding: 20px;" data-aos="fade-right">
-                <h2 style="color: white; border-left: 5px solid #2196f3; padding-left: 10px;">WHY CHOOSE US</h2>
-                <p style="margin-top: 20px; line-height: 1.8;">
-                    As an acknowledged industry pioneer, Logitra Solutions has always stood by its core value of trust and integrity, delivering excellence to customers across the nation. We are driven by customer needs and leverage technology and service to set ourselves apart.
-                </p>
-                <ul style="list-style: none; padding-left: 0;">
-                    <li><i class="fas fa-check-circle text-success me-2"></i> Transparent pricing and policies</li>
-                    <li><i class="fas fa-check-circle text-success me-2"></i> Nationwide network</li>
-                    <li><i class="fas fa-check-circle text-success me-2"></i> 24/7 customer support</li>
-                    <li><i class="fas fa-check-circle text-success me-2"></i> Advanced tracking systems</li>
-                </ul>
-            </div>
-
-            <div style="flex: 1 1 500px; padding: 20px; text-align: center;" data-aos="fade-left">
-                <img src="chooseus.webp" alt="Why Choose Us" style="width: 100%; max-width: 800px; border-radius: 15px; box-shadow: 0 0 20px rgba(0,0,0,0.3);">
-            </div>
-
+      <!-- 2. Air Express -->
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card border-danger">
+          <div class="card-img-container">
+            <img src="air.JPG" class="card-img-top" alt="Air Express">
+            <a href="air-express.html" class="floating-btn">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="card-body bg-light text-center">
+            <h5 class="card-title text-danger">Air Express</h5>
+          </div>
         </div>
-    </section>
+      </div>
+
+      <!-- 3. Managing Demand Chain -->
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card border-danger">
+          <div class="card-img-container">
+            <img src="demand.JPG" class="card-img-top" alt="Managing Demand Chain">
+            <a href="demand-chain.html" class="floating-btn">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="card-body bg-light text-center">
+            <h5 class="card-title text-danger">Managing Demand Chain</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. 3PL & 4PL Management -->
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="card border-danger">
+          <div class="card-img-container">
+            <img src="pl.JPG" class="card-img-top" alt="3PL & 4PL Management">
+            <a href="3pl-4pl.html" class="floating-btn">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="card-body bg-light text-center">
+            <h5 class="card-title text-danger">3PL & 4PL Management</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Cold Chain Logistics -->
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="card border-danger">
+          <div class="card-img-container">
+            <img src="cold.JPG" class="card-img-top" alt="Cold chain Logistics">
+            <a href="cold-chain.html" class="floating-btn">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="card-body bg-light text-center">
+            <h5 class="card-title text-danger">Cold chain Logistics</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. E-Consultancy -->
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="600">
+        <div class="card border-danger">
+          <div class="card-img-container">
+            <img src="e.JPG" class="card-img-top" alt="E-Consultancy">
+            <a href="e-consultancy.html" class="floating-btn">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="card-body bg-light text-center">
+            <h5 class="card-title text-danger">E-Consultancy</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Real-Time Tracking -->
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="700">
+        <div class="card border-danger">
+          <div class="card-img-container">
+            <img src="real.JPG" class="card-img-top" alt="Real-Time Tracking">
+            <a href="real-time.html" class="floating-btn">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="card-body bg-light text-center">
+            <h5 class="card-title text-danger">Real-Time Tracking</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Customer Support -->
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="800">
+        <div class="card border-danger">
+          <div class="card-img-container">
+            <img src="customer.JPG" class="card-img-top" alt="Customer Support">
+            <a href="customer-support.html" class="floating-btn">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="card-body bg-light text-center">
+            <h5 class="card-title text-danger">Customer Support</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <section id="why-choose-us" style="background: url('choose.png') center center / cover no-repeat;
+; color: white; padding: 80px 20px;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+
+    <!-- Text Block -->
+    <div style="flex: 1 1 500px;" data-aos="fade-right">
+      <h2 style="font-size: 36px; font-weight: bold; margin-bottom: 20px; border-left: 6px solid #00e676; padding-left: 16px; text-shadow: 0 0 10px #00e676;">
+        WHY <span style="color: #00e676;">CHOOSE US</span>
+      </h2>
+      <p style="font-size: 18px; line-height: 1.8; margin-bottom: 30px; color: #dcdcdc;">
+        🚛 At <strong>Logitra Solutions</strong>, we don’t just transport goods — we deliver <span style="color:#00e676; font-weight:bold;">trust, speed, and reliability</span> across every mile. Our tech-driven logistics model ensures you're always ahead of the curve.
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 17px;">
+        <div style="display: flex; align-items: center; background: rgba(255,255,255,0.05); padding: 10px 12px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,255,150,0.2);">
+          <i class="fas fa-shield-alt" style="color: #00e676; font-size: 22px; margin-right: 12px;"></i>
+          <span>Transparent Pricing & Policies</span>
+        </div>
+        <div style="display: flex; align-items: center; background: rgba(255,255,255,0.05); padding: 10px 12px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,255,150,0.2);">
+          <i class="fas fa-network-wired" style="color: #00e676; font-size: 22px; margin-right: 12px;"></i>
+          <span>Nationwide Logistics Network</span>
+        </div>
+        <div style="display: flex; align-items: center; background: rgba(255,255,255,0.05); padding: 10px 12px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,255,150,0.2);">
+          <i class="fas fa-headset" style="color: #00e676; font-size: 22px; margin-right: 12px;"></i>
+          <span>24/7 Live Customer Support</span>
+        </div>
+        <div style="display: flex; align-items: center; background: rgba(255,255,255,0.05); padding: 10px 12px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,255,150,0.2);">
+          <i class="fas fa-map-marked-alt" style="color: #00e676; font-size: 22px; margin-right: 12px;"></i>
+          <span>Real-Time Shipment Tracking</span>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div style="margin-top: 40px;">
+        <a href="#contact" style="background: #00e676; color: #000; padding: 14px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 20px rgba(0,255,100,0.5); transition: 0.3s;">
+          Let’s Work Together →
+        </a>
+      </div>
+    </div>
+
+    <!-- Image Block -->
+    <div style="flex: 1 1 500px; text-align: center;" data-aos="fade-left">
+      <div style="position: relative; display: inline-block; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform 0.3s ease;">
+        <img src="chooseus.webp" alt="Why Choose Us" style="width: 100%; max-width: 550px;">
+        <div style="position: absolute; top: 10px; right: 10px; background: #00e676; color: #000; padding: 8px 16px; border-radius: 20px; font-weight: bold; font-size: 14px; animation: pulse 2s infinite;">
+          99.9% Delivery Success
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pulse Animation -->
+<style>
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0,230,118, 0.6); }
+  70% { box-shadow: 0 0 0 12px rgba(0,230,118, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,230,118, 0); }
+}
+</style>
+
+
 
 
   <!-- Include Fonts in <head> if not already added -->
@@ -484,49 +652,51 @@ font-family: 'Dancing Script', cursive;
     <div style="display: flex; gap: 40px; flex-wrap: wrap; justify-content: space-between;">
 
       <!-- Contact Info -->
-      <div style="
-        flex: 1; 
-        min-width: 320px; 
-        background: rgba(255, 255, 255, 0.95); 
-        padding: 40px 30px; 
-        border-radius: 12px; 
-        box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        font-family: 'Segoe UI', sans-serif;
-        font-size: 18px;
-        line-height: 1.8;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      ">
-        <div style="margin-bottom: 25px;">
-          <i class="fas fa-envelope" style="color: #ff4b2b; font-size: 24px; margin-right: 10px;"></i>
-          <strong style="font-size: 20px;">Email</strong><br>
-          <a href="mailto:support@logitrasolutions.com" style="color: #007BFF; text-decoration: none; font-weight: bold;">
-            pramod.logitra@gmail.com
-          </a>
-        </div>
+    <!-- Contact Info -->
+<div style="
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+">
 
-        <div style="margin-bottom: 25px;">
-          <i class="fas fa-phone-alt" style="color: #28a745; font-size: 24px; margin-right: 10px;"></i>
-          <strong style="font-size: 20px;">Mobile</strong><br>
-          +91 7990797131<br>+91 9727544888
-        </div>
+  <!-- Email -->
+  <div>
+    <i class="fas fa-envelope" style="color: #e74c3c; font-size: 30px;"></i><br>
+    <h3 style="margin: 10px 0 5px; font-size: 20px;">Email</h3>
+    <a href="mailto:support@logitrasolutions.com" style="color: #007bff; font-weight: bold; text-decoration: none;">
+      support@logitrasolutions.com
+    </a>
+  </div>
 
-        <div style="margin-bottom: 25px;">
-          <i class="fas fa-map-marker-alt" style="color: #dc3545; font-size: 24px; margin-right: 10px;"></i>
-          <strong style="font-size: 20px;">Address</strong><br>
-          L-106 Sorrel Apartments,<br>
-          Applewood Township,<br>
-          Ahemdabad-380058
-        </div>
+  <!-- Mobile -->
+  <div>
+    <i class="fas fa-phone-alt" style="color: #27ae60; font-size: 30px;"></i><br>
+    <h3 style="margin: 10px 0 5px; font-size: 20px;">Mobile</h3>
+    <span style="display: block;">+91 7990797131</span>
+    <span style="display: block;">+91 9727544888</span>
+  </div>
 
-        <div style="margin-top: 10px;">
-          <a href="https://wa.me/917990797131" target="_blank" style="margin-right: 20px; color: #25D366; font-size: 28px;"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.linkedin.com/in/pramod-logitra" target="_blank" style="color: #0e76a8; font-size: 28px;"><i class="fab fa-linkedin"></i></a>
-        </div>
-      </div>
+  <!-- Address -->
+  <div>
+    <i class="fas fa-map-marker-alt" style="color: #c0392b; font-size: 30px;"></i><br>
+    <h3 style="margin: 10px 0 5px; font-size: 20px;">Address</h3>
+    <span>L-106 Sorrel Apartments,</span><br>
+    <span>Applewood Township,</span><br>
+    <span>Ahemdabad-380058</span>
+  </div>
 
-      <!-- Contact Form -->
+ </div>
+
+             <!-- Contact Form -->
       <div style="flex: 1; min-width: 280px; background: rgba(255,255,255,0.95); padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1);">
         <form id="contactForm">
           <div style="margin-bottom: 15px;">
